@@ -1,0 +1,61 @@
+[44.029951096] 2018-04-04 19:37:13,397 - INFO - launcher: Starting sanity checks
+[44.531106949] 2018-04-04 19:37:13,397 - INFO - launcher: Checking for Python 3.5+
+[44.531106949] 2018-04-04 19:37:13,397 - INFO - launcher: Checking console encoding
+[45.033693314] 2018-04-04 19:37:13,398 - INFO - launcher: Setting console encoding to UTF-8
+[45.033693314] 2018-04-04 19:37:13,398 - INFO - launcher: Ensuring we're in the right environment
+[46.929597855] 2018-04-04 19:37:13,400 - INFO - launcher: Adding local bins/ folder to path
+[48.429250717] 2018-04-04 19:37:13,401 - INFO - launcher: Required checks passed.
+[48.930644989] 2018-04-04 19:37:13,402 - INFO - launcher: Optional checks passed.
+[49.431085587] 2018-04-04 19:37:13,402 - INFO - launcher: Moving old musicbot log
+
+######################### PRE-RUN SANITY CHECKS PASSED #########################
+
+[1.7575550079345703] 2018-04-04 19:37:15,110 - WARNING - musicbot.config | In config.py::MainThread(6948), line 112 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
+[1.7575550079345703] 2018-04-04 19:37:15,110 - INFO - musicbot.config | In config.py::MainThread(6948), line 123 in run_checks: Using i18n: config/i18n/en.json
+[1.7605571746826172] 2018-04-04 19:37:15,113 - DEBUG - musicbot.json | In json.py::MainThread(6948), line 8 in __init__: Init JSON obj with config/i18n/en.json
+[1.9946014881134033] 2018-04-04 19:37:15,347 - DEBUG - musicbot.bot | In bot.py::MainThread(6948), line 227 in _setup_logging: Set logging level to INFO
+[1.9946014881134033] 2018-04-04 19:37:15,347 - INFO - musicbot.bot | In bot.py::MainThread(6948), line 84 in __init__: Starting MusicBot 1.9.7
+[1.9955945014953613] 2018-04-04 19:37:15,348 - INFO - musicbot.bot | In bot.py::MainThread(6948), line 90 in __init__: Loaded autoplaylist with 2531 entries
+[2.031121254] launcher-ERROR: Error starting bot
+Traceback (most recent call last):
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aiohttp\connector.py", line 589, in _create_direct_connection
+    hosts = yield from self._resolve_host(req.host, req.port)
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aiohttp\connector.py", line 561, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aiohttp\resolver.py", line 29, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "run.py", line 348, in main
+    m = MusicBot()
+  File "F:\Coderen\JavaScript\Discord\Bots\MusicBot\MusicBot\musicbot\bot.py", line 109, in __init__
+    self.spotify = Spotify(self.config.spotify_clientid, self.config.spotify_clientsecret, aiosession=self.aiosession, loop=self.loop)
+  File "F:\Coderen\JavaScript\Discord\Bots\MusicBot\MusicBot\musicbot\spotify.py", line 23, in __init__
+    self.loop.run_until_complete(self.get_token())  # validate token
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "F:\Coderen\JavaScript\Discord\Bots\MusicBot\MusicBot\musicbot\spotify.py", line 65, in get_token
+    token = await self.request_token()
+  File "F:\Coderen\JavaScript\Discord\Bots\MusicBot\MusicBot\musicbot\spotify.py", line 82, in request_token
+    r = await self.make_post(self.OAUTH_TOKEN_URL, payload=payload, headers=headers)
+  File "F:\Coderen\JavaScript\Discord\Bots\MusicBot\MusicBot\musicbot\spotify.py", line 55, in make_post
+    async with self.aiosession.post(url, data=payload, headers=headers) as r:
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aiohttp\client.py", line 565, in __aenter__
+    self._resp = yield from self._coro
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "C:\Users\jaspe\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 11001] Cannot connect to host accounts.spotify.com:443 ssl:True [getaddrinfo failed]
+[2.041129589] launcher-INFO: All done.

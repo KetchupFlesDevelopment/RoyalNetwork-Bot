@@ -1,0 +1,41 @@
+[53.037405014] 2018-04-04 19:40:21,330 - INFO - launcher: Starting sanity checks
+[53.037405014] 2018-04-04 19:40:21,330 - INFO - launcher: Checking for Python 3.5+
+[54.038286209] 2018-04-04 19:40:21,331 - INFO - launcher: Checking console encoding
+[54.038286209] 2018-04-04 19:40:21,331 - INFO - launcher: Setting console encoding to UTF-8
+[55.039644241] 2018-04-04 19:40:21,332 - INFO - launcher: Ensuring we're in the right environment
+[57.038307190] 2018-04-04 19:40:21,334 - INFO - launcher: Adding local bins/ folder to path
+[58.039903641] 2018-04-04 19:40:21,335 - INFO - launcher: Required checks passed.
+[120.961904526] 2018-04-04 19:40:21,398 - INFO - launcher: Optional checks passed.
+[123.963117599] 2018-04-04 19:40:21,401 - INFO - launcher: Moving old musicbot log
+
+######################### PRE-RUN SANITY CHECKS PASSED #########################
+
+[3.1087305545806885] 2018-04-04 19:40:24,385 - WARNING - musicbot.config | In config.py::MainThread(13420), line 112 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
+[3.1097316741943359] 2018-04-04 19:40:24,386 - INFO - musicbot.config | In config.py::MainThread(13420), line 123 in run_checks: Using i18n: config/i18n/en.json
+[3.1147346496582031] 2018-04-04 19:40:24,391 - DEBUG - musicbot.json | In json.py::MainThread(13420), line 8 in __init__: Init JSON obj with config/i18n/en.json
+[3.6954536437988281] 2018-04-04 19:40:24,972 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 227 in _setup_logging: Set logging level to INFO
+[3.6964614391326904] 2018-04-04 19:40:24,973 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 84 in __init__: Starting MusicBot 1.9.7
+[3.7024590969085693] 2018-04-04 19:40:24,979 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 90 in __init__: Loaded autoplaylist with 2531 entries
+[4.1767799854278564] 2018-04-04 19:40:25,453 - DEBUG - musicbot.spotify | In spotify.py::MainThread(13420), line 70 in get_token: Created a new access token: {'access_token': 'BQDYdf-P9rJ-3aPcUnseSB7B9b-rEtE_s6ao3n6mw2cpSoyw4LaswGlMBPGuE3WdLdozSjqNocPHs6QU8GY', 'token_type': 'Bearer', 'expires_in': 3600, 'scope': '', 'expires_at': 1522867225}
+[4.1767799854278564] 2018-04-04 19:40:25,453 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 115 in __init__: Authenticated with Spotify successfully using client ID and secret.
+[7.5746622085571289] 2018-04-04 19:40:28,851 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 1074 in on_ready: Connection established, ready to go.
+[7.5746622085571289] 2018-04-04 19:40:28,851 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 339 in _cache_app_info: Caching app info
+[8.0664412975311279] 2018-04-04 19:40:29,343 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 889 in _scheck_ensure_env: Ensuring data folders exist
+[8.0714445114135742] 2018-04-04 19:40:29,348 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 899 in _scheck_ensure_env: Deleted old audio cache
+[8.0714445114135742] 2018-04-04 19:40:29,348 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 905 in _scheck_server_permissions: Checking server permissions
+[8.0714445114135742] 2018-04-04 19:40:29,348 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 909 in _scheck_autoplaylist: Auditing autoplaylist
+[8.0724446773529053] 2018-04-04 19:40:29,349 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 913 in _scheck_configs: Validating config
+[8.0724446773529053] 2018-04-04 19:40:29,349 - DEBUG - musicbot.config | In config.py::MainThread(13420), line 212 in async_validate: Validating options...
+[8.0724446773529053] 2018-04-04 19:40:29,349 - DEBUG - musicbot.config | In config.py::MainThread(13420), line 226 in async_validate: Acquired owner id via API
+[8.0724446773529053] 2018-04-04 19:40:29,349 - DEBUG - musicbot.bot | In bot.py::MainThread(13420), line 916 in _scheck_configs: Validating permissions config
+[8.0724446773529053] 2018-04-04 19:40:29,349 - DEBUG - musicbot.permissions | In permissions.py::MainThread(13420), line 64 in async_validate: Validating permissions...
+[8.0734450817108154] 2018-04-04 19:40:29,350 - DEBUG - musicbot.permissions | In permissions.py::MainThread(13420), line 68 in async_validate: Fixing automatic owner group
+[8.0734450817108154] 2018-04-04 19:40:29,350 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 1091 in on_ready: Connected: 430752759223025664/RoyalNetwork#7206
+[8.0764470100402832] 2018-04-04 19:40:29,353 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 1099 in on_ready: Owner:     286870278024462337/KetchupFles | DEV#6080
+
+[8.0774481296539307] 2018-04-04 19:40:29,354 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 1102 in on_ready: Server List:
+[8.0774481296539307] 2018-04-04 19:40:29,354 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 1105 in on_ready:  - RoyalNetwork
+[8.0784499645233154] 2018-04-04 19:40:29,355 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 1105 in on_ready:  - Vyze Clan - Gaming Clan
+[8.0784499645233154] 2018-04-04 19:40:29,355 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 1151 in on_ready: Not bound to any text channels
+[8.0794496536254883] 2018-04-04 19:40:29,356 - INFO - musicbot.bot | In bot.py::MainThread(13420), line 1177 in on_ready: Not autojoining any voice channels
+[8.9354016780853271] 2018-04-04 19:40:30,212 - VOICEDEBUG - musicbot.bot | In bot.py::MainThread(13420), line 2938 in on_voice_state_update: Voice state update for 286870278024462337/KetchupFles | DEV#6080 on RoyalNetwork/High Staff -> [CONNECT]
