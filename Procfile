@@ -1,1 +1,1 @@
-worker: CMD /k python run.py
+worker: python run.py
